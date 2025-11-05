@@ -1,0 +1,19 @@
+study:
+        name: 'FetalAtlas'
+
+model:
+    optimizer: 'Adam'
+    scheduler: 'CosAn'
+    loss: 'L1'    ##'L2' or 'L1'
+    dist: 0.8
+    reg: 0.5
+    shooting: 'svf'
+    contrastive_weight: 0.001 ######## change this into a lower rate if atlas is not getting better  
+solver:
+    lr: 0.0005
+    atlas_lr: 0.0005
+    epochs: 1001
+    batch_size: 4
+    weight_decay: 0.005
+    Euler_steps: 10
+    Sigma: 0.04
